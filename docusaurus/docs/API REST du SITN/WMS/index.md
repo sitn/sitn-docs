@@ -1,4 +1,4 @@
-# Service WMS
+# WMS
 
 Le service WMS du SITN est une implémentation REST du standard [WMS OGC](http://www.opengeospatial.org/standards/wms).
 

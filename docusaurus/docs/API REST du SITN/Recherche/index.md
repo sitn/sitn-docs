@@ -1,6 +1,6 @@
-# Service de recherche _Full text_ géographique
+# Recherche plein texte (FTS)
 
-Idéal pour de l'autocomplétion, un service de recherche de texte sur objets géographiques est disponible à l'url suivante:
+Idéal pour de l'autocomplétion, un service de recherche de texte (_Full text search_) sur objets géographiques est disponible à l'url suivante:
 
 https://sitn.ne.ch/search
 

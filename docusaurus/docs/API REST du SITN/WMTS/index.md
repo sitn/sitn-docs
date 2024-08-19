@@ -1,4 +1,4 @@
-# Service WMTS
+# WMTS
 
 Le service WMTS du SITN est une implémentation REST du standard [WMTS OGC](http://www.opengeospatial.org/standards/wmts).
 

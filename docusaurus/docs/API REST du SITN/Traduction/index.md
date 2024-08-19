@@ -1,4 +1,4 @@
-# Service web de traduction
+# Traduction
 
 Les noms des tables, couches WMS ou WMTS ainsi que les noms des colonnes ou champs de données sont des noms techniques. Par exemple `at034_autorisation_construire_apres`
 
