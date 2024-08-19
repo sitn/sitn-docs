@@ -10,6 +10,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         "wmts-getcapabilities": resolve(__dirname, "wmts-getcapabilities/demo.html"),
         "wmts-plain": resolve(__dirname, "wmts-plain/demo.html"),
+        "wms": resolve(__dirname, "wms/demo.html"),
       },
     },
     sourcemap: true,

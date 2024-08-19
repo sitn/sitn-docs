@@ -8,7 +8,7 @@ Each part is managed seraparatly by two distincts package.json
 
 ## Run docusaurus
 
-```sh
+```powershell
 cd docusaurus
 npm i
 npm start
@@ -16,7 +16,7 @@ npm start
 
 ## Run live examples
 
-```sh
+```powershell
 cd examples
 npm i
 npm start
@@ -24,3 +24,7 @@ npm start
 
 ## Deploy
 
+```powershell
+$env:DOCKER_HOST="ssh://<user>@<server>.ne.ch"
+docker compose up -d
+```
