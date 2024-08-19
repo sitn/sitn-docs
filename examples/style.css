@@ -1,0 +1,32 @@
+html,
+body {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Noto Sans",
+    "Liberation Sans",
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.card-container {
+  display: flex;
+  gap: 1em;
+}
+
+.card {
+  display: block;
+  background-color: #0EA5E9;
+  color: white;
+  padding: 1em;
+  border-radius: 1em;
+  text-decoration: none;
+  max-width: 18em;
+}

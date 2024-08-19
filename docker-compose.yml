@@ -1,0 +1,18 @@
+services:
+  examples:
+    pull_policy: build
+    image: sitn-examples
+    build:
+      context: examples
+    restart: unless-stopped
+    ports:
+      - "5022:80"
+
+  docusaurus:
+    pull_policy: build
+    image: sitn-docs
+    build:
+      context: docusaurus
+    restart: unless-stopped
+    ports:
+      - "5023:80"
