@@ -60,7 +60,6 @@ new Map({
   view: new View({
     projection: projection,
     center: [2550000, 1207000],
-    zoom: 5,
     resolution: 1,
     resolutions: resolutions,
     constrainResolution: true,

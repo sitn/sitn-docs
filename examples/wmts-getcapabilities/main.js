@@ -33,11 +33,16 @@ fetch("https://sitn.ne.ch/services/wmts?SERVICE=WMTS&REQUEST=GetCapabilities")
       matrixSet: crs,
     });
 
+    const source = new WMTS(options);
+    source.setAttributions(
+      '<a target="new" href="https://www.ne.ch/sitn">SITN</a>',
+    );
+
     new Map({
       layers: [
         new TileLayer({
           opacity: 1,
-          source: new WMTS(options),
+          source,
         }),
       ],
       target: "map",

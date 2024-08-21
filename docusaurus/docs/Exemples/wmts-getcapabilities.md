@@ -2,6 +2,8 @@
 
 OpenLayers peut s'autoconfigurer sur la base du GetCapabilities.
 
+[Plus d'infos sur le WMTS](../API%20REST%20du%20SITN/WMTS/)
+
 ```js title="/main.js"
 import proj4 from "proj4";
 import Map from "ol/Map.js";
@@ -11,7 +13,7 @@ import WMTS, { optionsFromCapabilities } from "ol/source/WMTS";
 import { Projection } from "ol/proj";
 import WMTSCapabilities from "ol/format/WMTSCapabilities";
 import { register } from "ol/proj/proj4";
-import '../assets/style.css';
+import "../assets/style.css";
 
 const parser = new WMTSCapabilities();
 const crs = "EPSG:2056";
@@ -34,15 +36,20 @@ fetch("https://sitn.ne.ch/services/wmts?SERVICE=WMTS&REQUEST=GetCapabilities")
   .then(function (text) {
     const result = parser.read(text);
     const options = optionsFromCapabilities(result, {
-      layer: "ortho2023",
+      layer: "ortho2022",
       matrixSet: crs,
     });
+
+    const source = new WMTS(options);
+    source.setAttributions(
+      '<a target="new" href="https://www.ne.ch/sitn">SITN</a>',
+    );
 
     new Map({
       layers: [
         new TileLayer({
           opacity: 1,
-          source: new WMTS(options),
+          source,
         }),
       ],
       target: "map",
@@ -53,7 +60,6 @@ fetch("https://sitn.ne.ch/services/wmts?SERVICE=WMTS&REQUEST=GetCapabilities")
       }),
     });
   });
-
 ```
 
 ```html title="/index.html"

@@ -4,6 +4,8 @@ Il est possible de définir les paramètres des couches WMTS manuellement. Cela 
 - Performance: le téléchargement et la lecture du fichier xml du GetCapabilities n'est pas nécessaire
 - Qualité: les niveaux de zoom (resolutions) étant prédéfinis, OpenLayers zoomera à la même résolution que celle des imagettes WMTS rendant un résultat net
 
+[Plus d'infos sur le WMTS](../API%20REST%20du%20SITN/WMTS/)
+
 ```js title="/main.js"
 import proj4 from "proj4";
 import Map from "ol/Map.js";
@@ -67,7 +69,6 @@ new Map({
   view: new View({
     projection: projection,
     center: [2550000, 1207000],
-    zoom: 5,
     resolution: 1,
     resolutions: resolutions,
     constrainResolution: true,
