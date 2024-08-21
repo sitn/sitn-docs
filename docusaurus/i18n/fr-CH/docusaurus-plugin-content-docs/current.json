@@ -3,11 +3,11 @@
     "message": "Next",
     "description": "The label for version current"
   },
-  "sidebar.examplesSidebar.category.Documentation de l'API REST du SITN": {
+  "sidebar.examplesSidebar.category.api": {
     "message": "Documentation de l'API REST du SITN",
     "description": "The label for category Documentation de l'API REST du SITN in sidebar examplesSidebar"
   },
-  "sidebar.examplesSidebar.category.Exemples": {
+  "sidebar.examplesSidebar.category.examples": {
     "message": "Exemples",
     "description": "The label for category Exemples in sidebar examplesSidebar"
   }

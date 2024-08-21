@@ -4,7 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "Documentation SITN",
-  tagline: "SITN API and Webservices documentation",
+  tagline: "Bienvenue sur la page de documentation des services du SITN!",
   favicon: "img/favicon.ico",
   url: "https://sitn.ne.ch",
   baseUrl: "/services",
