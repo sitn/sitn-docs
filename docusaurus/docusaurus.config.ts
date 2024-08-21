@@ -29,7 +29,17 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  themes: ["docusaurus-theme-github-codeblock"],
+  themes: [
+    "docusaurus-theme-github-codeblock",
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      {
+        language: "fr",
+      },
+    ],
+  ],
+
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
