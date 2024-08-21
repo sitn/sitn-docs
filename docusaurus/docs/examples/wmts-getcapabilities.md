@@ -2,7 +2,7 @@
 
 OpenLayers peut s'autoconfigurer sur la base du GetCapabilities.
 
-[Plus d'infos sur le WMTS](../API%20REST%20du%20SITN/WMTS/)
+[Plus d'infos sur le WMTS](../api/WMTS/)
 
 ```js reference title="/main.js"
 https://github.com/sitn/sitn-docs/blob/master/examples/wmts-getcapabilities/main.js

@@ -4,7 +4,7 @@ Il est possible de définir les paramètres des couches WMTS manuellement. Cela 
 - Performance: le téléchargement et la lecture du fichier xml du GetCapabilities n'est pas nécessaire
 - Qualité: les niveaux de zoom (resolutions) étant prédéfinis, OpenLayers zoomera à la même résolution que celle des imagettes WMTS rendant un résultat net
 
-[Plus d'infos sur le WMTS](../API%20REST%20du%20SITN/WMTS/)
+[Plus d'infos sur le WMTS](../api/WMTS/)
 
 ```js reference title="/main.js"
 https://github.com/sitn/sitn-docs/blob/master/examples/wmts-plain/main.js
