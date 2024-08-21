@@ -70,8 +70,16 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Openlayers demo",
-              to: "/docs/Exemples/wmts-getcapabilities",
+              label: "API REST",
+              to: "/docs/api",
+            },
+            {
+              label: "Exemples live",
+              to: "/docs/examples",
+            },
+            {
+              label: "Intégration dans QGIS",
+              to: "/docs/qgis",
             },
           ],
         },
@@ -89,6 +97,15 @@ const config: Config = {
             {
               label: "Géoportail LiDAR",
               href: "https://sitn.ne.ch/lidar",
+            },
+          ],
+        },
+        {
+          title: "Contact",
+          items: [
+            {
+              label: "Nous écrire",
+              href: "mailto:sitn@ne.ch",
             },
           ],
         },
