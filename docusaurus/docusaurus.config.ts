@@ -90,6 +90,9 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
+    themes: [
+      '@saucelabs/theme-github-codeblock'
+    ],
   } satisfies Preset.ThemeConfig,
 };
 
