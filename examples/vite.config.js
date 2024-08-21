@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        "layer-selector": resolve(__dirname, "layer-selector/demo.html"),
         "wmts-getcapabilities": resolve(__dirname, "wmts-getcapabilities/demo.html"),
         "wmts-plain": resolve(__dirname, "wmts-plain/demo.html"),
         "wms": resolve(__dirname, "wms/demo.html"),

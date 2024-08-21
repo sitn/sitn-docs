@@ -1,98 +1,100 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
+import { themes as prismThemes } from "prism-react-renderer";
+import type { Config } from "@docusaurus/types";
+import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: 'Documentation SITN',
-  tagline: 'SITN API and Webservices documentation',
-  favicon: 'img/favicon.ico',
-  url: 'https://sitn.ne.ch',
-  baseUrl: '/services',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  title: "Documentation SITN",
+  tagline: "SITN API and Webservices documentation",
+  favicon: "img/favicon.ico",
+  url: "https://sitn.ne.ch",
+  baseUrl: "/services",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   i18n: {
-    defaultLocale: 'fr-CH',
-    locales: ['fr-CH'],
+    defaultLocale: "fr-CH",
+    locales: ["fr-CH"],
   },
 
   presets: [
     [
-      'classic',
+      "classic",
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          editUrl:
-            'https://github.com/sitn/sitn-docs/',
+          sidebarPath: "./sidebars.ts",
+          editUrl: "https://github.com/sitn/sitn-docs/",
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: "./src/css/custom.css",
         },
       } satisfies Preset.Options,
     ],
   ],
-
+  themes: ["docusaurus-theme-github-codeblock"],
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
+    image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: 'Accueil',
+      title: "Accueil",
       logo: {
-        alt: 'État de Neuchâtel',
-        src: 'img/logo.svg',
+        alt: "État de Neuchâtel",
+        src: "img/logo.svg",
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'examplesSidebar',
-          position: 'left',
-          label: 'Documentation',
+          type: "docSidebar",
+          sidebarId: "examplesSidebar",
+          position: "left",
+          label: "Documentation",
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          href: "https://github.com/facebook/docusaurus",
+          label: "GitHub",
+          position: "right",
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Openlayers demo',
-              to: '/docs/Exemples/wmts-getcapabilities',
+              label: "Openlayers demo",
+              to: "/docs/Exemples/wmts-getcapabilities",
             },
           ],
         },
         {
-          title: 'Liens',
+          title: "Liens",
           items: [
             {
-              label: 'Géoportail',
-              href: 'https://sitn.ne.ch',
+              label: "Géoportail",
+              href: "https://sitn.ne.ch",
             },
             {
-              label: 'Géoshop',
-              href: 'https://sitn.ne.ch/geoshop',
+              label: "Géoshop",
+              href: "https://sitn.ne.ch/geoshop",
             },
             {
-              label: 'Géoportail LiDAR',
-              href: 'https://sitn.ne.ch/lidar',
+              label: "Géoportail LiDAR",
+              href: "https://sitn.ne.ch/lidar",
             },
           ],
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} SITN`,
     },
+    codeblock: {
+      showGithubLink: true,
+      githubLinkLabel: "Voir sur GitHub",
+      showRunmeLink: false,
+      runmeLinkLabel: "Checkout via Runme",
+    },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
     },
-    themes: [
-      '@saucelabs/theme-github-codeblock'
-    ],
   } satisfies Preset.ThemeConfig,
 };
 
