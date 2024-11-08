@@ -25,10 +25,7 @@ npm start
 ## Deploy
 
 ```powershell
-docker compose build
-docker compose push
-$env:DOCKER_HOST="ssh://<user>@<server>.ne.ch"
-docker compose up -d
+python deploy
 ```
 
 ## Contribute
