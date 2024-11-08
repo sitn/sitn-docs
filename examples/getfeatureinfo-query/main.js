@@ -79,7 +79,7 @@ function showResults(gml) {
 }
 
 function performRequest(coordinate) {
-  const viewResolution = /** @type {number} */ (view.getResolution());
+  const viewResolution = view.getResolution();
   const url = wmsSource.getFeatureInfoUrl(coordinate, viewResolution, crs, {
     INFO_FORMAT: "application/vnd.ogc.gml",
     FEATURE_COUNT: "10",
