@@ -19,6 +19,7 @@ body {
 .card-container {
   display: flex;
   gap: 1em;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -28,5 +29,6 @@ body {
   padding: 1em;
   border-radius: 1em;
   text-decoration: none;
-  max-width: 18em;
+  max-width: 15em;
+  height: fit-content;
 }

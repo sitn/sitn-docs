@@ -8,6 +8,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        "getfeature-query": resolve(__dirname, "getfeature-query/demo.html"),
         "getfeatureinfo-query": resolve(__dirname, "getfeatureinfo-query/demo.html"),
         "layer-selector": resolve(__dirname, "layer-selector/demo.html"),
         "wmts-getcapabilities": resolve(__dirname, "wmts-getcapabilities/demo.html"),
