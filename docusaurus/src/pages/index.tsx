@@ -24,8 +24,8 @@ export default function Home(): JSX.Element {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={`Documentation SITN`}
+      description="Cette page documente les webservices et API mis à disposition par le SITN.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

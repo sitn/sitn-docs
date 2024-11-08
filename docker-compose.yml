@@ -1,7 +1,7 @@
 services:
   examples:
-    pull_policy: build
-    image: sitn-examples
+    image: ne2harbor.ne.ch/sgrf/sitn-examples
+    pull_policy: always
     build:
       context: examples
     restart: unless-stopped
@@ -9,8 +9,8 @@ services:
       - "5022:80"
 
   docusaurus:
-    pull_policy: build
-    image: sitn-docs
+    image: ne2harbor.ne.ch/sgrf/sitn-docs
+    pull_policy: always
     build:
       context: docusaurus
     restart: unless-stopped

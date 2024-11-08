@@ -25,6 +25,8 @@ npm start
 ## Deploy
 
 ```powershell
+docker compose build
+docker compose push
 $env:DOCKER_HOST="ssh://<user>@<server>.ne.ch"
 docker compose up -d
 ```
@@ -37,4 +39,4 @@ If you want to add a live-example to the documentation, best is to start in the 
 2. Reference it in `/index.html`
 3. Reference it in `/vite.config.js` in the `input` section
 4. Publish your code to GitHub and deploy examples container
-5. You are now able to include the github code in your markdown and a live exemple as an iframe 
+5. You are now able to include the github code in your markdown and a live exemple as an iframe
