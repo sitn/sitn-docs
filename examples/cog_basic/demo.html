@@ -32,12 +32,6 @@
 
 
     function createMap(extent, crs) {
-      /* const WMTS_reader = new ol.format.WMSCapabilities()
-
-      const options = ol.source.WMTS.optionsFromCapabilities(WMTS_reader.read(capabilities_text), {
-        layer: 'ortho2023',
-        matrixSet: 'EPSG:2056',
-      }) */
   
       const cog = new ol.source.GeoTIFF({
         sources : [ {
