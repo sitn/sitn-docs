@@ -10,5 +10,5 @@ https://github.com/sitn/sitn-docs/blob/master/examples/wms_basic/demo.html
 <iframe
   width="100%"
   height="400px"
-  src="https://sitn.ne.ch/services/examples/wmss_basic/demo.html">
+  src="https://sitn.ne.ch/services/examples/wms_basic/demo.html">
 </iframe>
