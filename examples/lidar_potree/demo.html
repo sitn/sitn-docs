@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="icon" href="favicon.ico" />
+	<title>Potree Example</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r99/three.js" ></script>
+    <script src="https://cdn.jsdelivr.net/npm/proj4@2.11.0/dist/proj4.min.js "></script>
+    
+    <script src=" https://cdn.jsdelivr.net/npm/heap-js@2.5.0/dist/heap-js.umd.min.js "></script>
+    
+    <script src=" https://cdn.jsdelivr.net/npm/@3dr/potree@1.6.4/build/potree/potree.min.js "></script>
+    <link href=" https://cdn.jsdelivr.net/npm/potree@0.1.0/build/potree/potree.min.css " rel="stylesheet">
+</head>
+
+
+<div class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
+    <div id="gmf_search_input">
+        <input id="places" placeholder="Saisir une adresse">
+    </div>
+    <div id="potree_render_area"></div>
+    <div id="potree_sidebar_container"> </div>
+</div>
+
+<script>
+    console.log("In=")
+	
+    window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
+    
+    viewer.setEDLEnabled(true);
+    viewer.setFOV(60);
+    viewer.setPointBudget(4*1000*1000);
+    viewer.useHQ = true
+    viewer.loadSettingsFromURL();
+    viewer.setDescription('Géoportail LiDAR du<a target=_blank href="https://sitn.ne.ch/"> SITN</a></p>');
+    viewer.loadGUI(() => {
+        viewer.setLanguage('fr');
+        $("#menu_scene").next().show();
+        viewer.toggleSidebar();
+
+    
+    let section = $(`
+            <h3 id="menu_meta" class="accordion-header ui-widget"><span>Aide navigation</span></h3>
+            <div class="accordion-content ui-widget"></div>
+        `);
+        let content = section.last();
+        content.html(`
+      <img src="mouse.png" alt="mouse" width="100%"> 
+        `);
+        section.first().click(() => content.slideToggle());
+        section.insertBefore($('#menu_about'));
+    });
+    
+
+    async function loadDatasets(){
+
+        let scene = viewer.scene;
+        
+        {
+            // let result = await Potree.loadPointCloud("https://sitn.ne.ch/lidar/pointclouds/aerial/2022/lidar2022/metadata.json"); 
+            let pointcloud = result.pointcloud;
+            let material = pointcloud.material;
+
+            pointcloud.name = "SITN LiDAR 2022";
+            material.size = 1.5;
+            material.pointSizeType = Potree.PointSizeType.FIXED;
+            material.activeAttributeName = "rgba";
+            material.shape = Potree.PointShape.CIRCLE;
+            scene.addPointCloud(pointcloud);
+            viewer.fitToScreen();
+            pointcloud.visible = true;
+        }
+    };
+
+    loadDatasets();
+
+</script>
