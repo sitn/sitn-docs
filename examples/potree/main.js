@@ -1,7 +1,3 @@
-// Description: This script is used to load a LiDAR point cloud in the Potree viewer.
-// It is used in the LiDAR example of the SITN website.
-
-
 console.log("In=")
 	
 window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
@@ -11,23 +7,10 @@ viewer.setFOV(60);
 viewer.setPointBudget(4*1000*1000);
 viewer.useHQ = true
 viewer.loadSettingsFromURL();
-viewer.setDescription('Géoportail LiDAR du<a target=_blank href="https://sitn.ne.ch/"> SITN</a></p>');
+viewer.setDescription('Extrait du Géoportail LiDAR du<a target=_blank href="https://sitn.ne.ch/"> SITN</a></p>');
 viewer.loadGUI(() => {
     viewer.setLanguage('fr');
     $("#menu_scene").next().show();
-    viewer.toggleSidebar();
-
-
-    let section = $(`
-        <h3 id="menu_meta" class="accordion-header ui-widget"><span>Aide navigation</span></h3>
-        <div class="accordion-content ui-widget"></div>
-    `);
-    let content = section.last();
-    content.html(`
-  <img src="mouse.png" alt="mouse" width="100%"> 
-    `);
-    section.first().click(() => content.slideToggle());
-    section.insertBefore($('#menu_about'));
 });
 
 
