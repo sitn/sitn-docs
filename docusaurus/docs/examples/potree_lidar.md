@@ -5,11 +5,11 @@ Les scripts suivant se servent du "build" du SITN accessible sur le serveur.
   
 
 ```js reference title="/main.js"
-https://github.com/filsdufrere/sitn-docs/blob/potree_lidar_example/examples/potree/main.js#L3-L54
+https://github.com/sitn/sitn-docs/blob/master/examples/examples/potree/main.js#L5-L54
 ```
 
 ```html reference title="/demo.html"
-https://github.com/filsdufrere/sitn-docs/blob/potree_lidar_example/examples/potree/demo.html
+https://github.com/sitn/sitn-docs/blob/master/examples/potree/demo.html
 ```
 
 Il est aussi possible de créer votre propre build en clonant le répertoire github de [Potree](https://github.com/potree/potree/tree/develop) afin d'accèder aux packages et aux fichiers de configuration nécessaire. Il sera nécessaire d'avoir Node.js installé.   
@@ -30,5 +30,5 @@ npm start
 <iframe
   width="100%"
   height="400px"
-  src="https://sitn.ne.ch/web/teva/potree/demo.html">
+  src="https://sitn.ne.ch/services/examples/potree/demo.html">
 </iframe>
