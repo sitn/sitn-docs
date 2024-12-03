@@ -2,10 +2,6 @@
 // It is used in the LiDAR example of the SITN website.
 
 
-// import
-
-
-
 console.log("In=")
 	
 window.viewer = new Potree.Viewer(document.getElementById("potree_render_area"));
@@ -22,7 +18,7 @@ viewer.loadGUI(() => {
     viewer.toggleSidebar();
 
 
-let section = $(`
+    let section = $(`
         <h3 id="menu_meta" class="accordion-header ui-widget"><span>Aide navigation</span></h3>
         <div class="accordion-content ui-widget"></div>
     `);
