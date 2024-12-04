@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<link rel="icon" href="favicon.ico" />
+	<title>Potree Viewer</title>
+
+	<link rel="stylesheet" type="text/css" href="https://sitn.ne.ch/lidar/potree/build/potree/potree.css">
+</head>
+
+<body>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/jquery/jquery-3.1.1.min.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/spectrum/spectrum.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/jquery-ui/jquery-ui.min.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/three.js/build/three.min.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/other/BinaryHeap.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/tween/tween.min.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/d3/d3.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/proj4/proj4.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/i18next/i18next.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/libs/jstree/jstree.js"></script>
+	<script src="https://sitn.ne.ch/lidar/potree/build/potree/potree.js"></script>
+
+	<div class="potree_container" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; ">
+		<div id="potree_render_area"></div>
+		<div id="potree_sidebar_container"> </div>
+	</div>
+	
+	<script src = './main.js'> </script>
+
+</body>
+</html>
