@@ -1,6 +1,11 @@
-# WMTS basic
+# WMTS et CDN
 
-Le WMTS peut être utilisé sans passé par Node.js ni Vite.   
+L'exemple montre comment charger une couche WMTS avec OpenLayers, sans utiliser l'environnement d'exécution Node.js et le transpileur Vite. 
+
+Dans cet exemple, OpenLayers s'autoconfigure sur la base du GetCapabilities. 
+
+
+[Plus d'infos sur le WMTS](../api/WMTS/)
 
 ```html reference title="/demo.html"
 https://github.com/sitn/sitn-docs/blob/master/examples/wmts_basic/demo.html

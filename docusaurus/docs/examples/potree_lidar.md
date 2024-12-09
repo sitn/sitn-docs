@@ -1,11 +1,11 @@
 # Visualisation de points Lidar via Potree
 
 Cet exemple démontre comment instantier le visualisateur Potree du SITN localement.  
-Les scripts suivant se servent du "build" du SITN accessible sur le serveur. 
+Les scripts suivant se servent du "build" Potree du SITN accessible sur le serveur. 
   
 
 ```js reference title="/main.js"
-https://github.com/sitn/sitn-docs/blob/master/examples/examples/potree/main.js#L5-L54
+https://github.com/sitn/sitn-docs/blob/master/examples/potree/main.js
 ```
 
 ```html reference title="/demo.html"
