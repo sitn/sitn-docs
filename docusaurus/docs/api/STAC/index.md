@@ -13,5 +13,3 @@ Les scripts ci-dessous permettent le téléchargement automatique de tous les é
 ```python reference title="/stac_download.py"
 https://github.com/sitn/sitn-docs/blob/master/examples/stac/stac_download.py
 ```
-
-### Powershell
