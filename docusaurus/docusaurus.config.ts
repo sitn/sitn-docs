@@ -79,7 +79,7 @@ const config: Config = {
             },
             {
               label: "Intégration dans QGIS",
-              to: "/docs/QGIS",
+              to: "/docs/qgis",
             },
           ],
         },

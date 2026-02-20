@@ -24,7 +24,7 @@
     "description": "The label of footer link with label=Géoportail LiDAR linking to https://sitn.ne.ch/lidar"
   },
   "copyright": {
-    "message": "Copyright © 2024 SITN",
+    "message": "Copyright © 2025 SITN",
     "description": "The footer copyright"
   }
 }
